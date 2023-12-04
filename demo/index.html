@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            margin-bottom: 20px;
+           
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="myfun()" id="h1pointer">hello javascript</h1>
+    <div  id="box1" class="box"></div>
+    <button  id="hide">Hide</button>
+    <button id="unhide">Unhide</button>
+    
+</body>
+<script>
+    function myfun(){
+        var h1pointer=document.getElementById("h1pointer")
+        h1pointer.innerHTML="Hi js"
+        h1pointer.style.fontSize="60px"
+    }
+  
+    var hidebtn=document.getElementById("hide")
+    hidebtn.addEventListener("click",function(e){
+        document.getElementById("box1").classList.add("hide")
+    })
+
+    var unhidebtn=document.getElementById("unhide")
+    unhidebtn.addEventListener("click",function(e){
+        document.getElementById("box1").classList.remove("hide")
+    })
+
+</script>
+</html>
